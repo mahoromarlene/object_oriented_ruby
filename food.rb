@@ -32,6 +32,7 @@ end
 food1 = Food.new("apple", "green", 300)
 food2 = Food.new("tomato", "red", 50)
 food3 = Food.new("flour", "white", 500)
-
+puts food1.info
 food1.price = 400
 puts food1.price
+
