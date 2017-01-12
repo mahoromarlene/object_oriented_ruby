@@ -3,10 +3,10 @@ class Food
   attr_reader :name, :color, :price
   attr_writer :price
 
-  def initialize(item_name, item_color, item_price)
-    @name = item_name
-    @color = item_color
-    @price = item_price
+  def initialize(item_hash)
+    @name = item_hash[:name]
+    @color = item_hash[:color]
+    @price = item_hash[:price]
   end
 
   def info
@@ -15,9 +15,9 @@ class Food
 
 end
 
-food1 = Food.new("apple", "green", 300)
-food2 = Food.new("tomato", "red", 50)
-food3 = Food.new("flour", "white", 500)
+food1 = Food.new({name: "apple", color: "green", price: 300})
+food2 = Food.new({name: "tomato", color: "red", price: 50})
+food3 = Food.new({name: "flour", color: "white", price: 500})
 puts food1.info
 puts food1.price
 food1.price = 400
